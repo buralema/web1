@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="../ECW.css" />
+  </head>
+  <body class="forms">
+    <nav class="navigation-items">
+      <ul class="list-menu">
+        <li><a href="../ECW.html">ECW</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./clothes.html">Clothes</a></li>
+        <li><a href="./form.html">Forms</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./contact.html">Contact </a></li>
+      </ul>
+    </nav>
+    <div class="all-forms">
+      <div class="buyer-form">
+        <center class="font-form">
+          <h1>Buyer-Form</h1>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="426268fb-f606-474c-bc36-0e880c0c29ee"
+            />
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="subject">Account no:</label>
+            <input type="number" id="subject" name="subject" required />
+
+            <label for="location">Location:</label>
+            <input type="text" id="email" name="location" required />
+            <label for="Phone">Phone:</label>
+            <input type="text" id="email" name="Phone" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </form>
+        </center>
+      </div>
+      <div class="seller-form">
+        <center class="font-form">
+          <h1>Seller-Form</h1>
+          <form
+            action="process_seller.php"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="price">Price (ETB):</label>
+            <input type="number" id="price" name="price" required />
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="">Select Category</option>
+              <option value="Habesha">kambata</option>
+              <option value="Oromo">Oromo</option>
+              <option value="Tigray">gamo</option>
+              <option value="Amhara">Amhara</option>
+            </select>
+
+            <label for="image">Product Image:</label>
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              required
+            />
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required />
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required />
+
+            <label for="description">Description:</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </form>
+
+          <h2><a href="view_sellers.php">View All Products</a></h2>
+        </center>
+      </div>
+    </div>
+    <footer>
+      <div class="box-1">
+        <h3>Quick Links</h3>
+        <div class="other">
+          <h5><a href="#">Home</a></h5>
+          <h5><a href="#">About</a></h5>
+          <h5><a href="#">cultural clothes</a></h5>
+          <h5><a href="#">form of buyer</a></h5>
+          <h5><a href="#">form of seller</a></h5>
+          <h5><a href="#">FAQ</a></h5>
+          <h5><a href="#">Contact</a></h5>
+        </div>
+      </div>
+      <div class="box-2">
+        <h3>Important Links</h3>
+        <div class="other">
+          <h5><a href="#">Refund Policy</a></h5>
+          <h5><a href="#">Terms and Condition</a></h5>
+          <h5><a href="#">Sizing</a></h5>
+          <h5><a href="#">Order Tracking</a></h5>
+        </div>
+      </div>
+      <div class="box-3">
+        <h3>Our mission</h3>
+        <div class="other">
+          <h5 class="unique">
+            <a href="">
+              <br />
+              promote and sell ethiopian<br />
+              tradional clothes and other<br />such as spices and jwelry
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="www.facebook.com" target="_blank">
+          <img src="../fb.png.png" alt="facebook" class="social-logo" />
+        </a>
+        <a href="https://t.me/Burika1212" target="_blank">
+          <img src="../tg.png.png" alt="telegram" class="social-logo" />
+        </a>
+        <a href="www.instagram.com" target="_blank">
+          <img src="../ig.png.png" alt="instagram" class="social-logo" />
+        </a>
+        <!-- <a href="www.youtube.com">
+                    <img src="../yt.png.webp" alt="youtube">
+                   
+                </a> -->
+      </div>
+    </footer>
+  </body>
+  <script>
+    document
+      .querySelector("button[type='reset']")
+      .addEventListener("click", function () {
+        document.getElementById("buyer-form").reset();
+      });
+  </script>
+</html>
